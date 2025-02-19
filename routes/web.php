@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Middleware\AuthenticateMiddlewawre;
 use App\Http\Middleware\LoginMiddleware;
+use App\Http\Controllers\Backend\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,3 +18,6 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 /* BACKEND ROUTE */
 Route::get('dashboard.index', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(AuthenticateMiddlewawre::class);
+
+/* USER */
+Route::get('user/index', [UserController::class, 'index'])->name('user.index')->middleware(AuthenticateMiddlewawre::class);
