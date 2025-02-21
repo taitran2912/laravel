@@ -7,9 +7,11 @@
     <!-- jQuery UI -->
     <script src="backend/js/plugins/jquery-ui/jquery-ui.min.js"></script>
     
-    @foreach ($config['js'] as $key => $value)
-        {!! '<script src="'.$value.'""></script>' !!}
-    @endforeach
+    @if(isset($config['js']) && is_array($config['js']))
+        @foreach ($config['js'] as $key => $value)
+            {!! '<script src="'.$value.'""></script>' !!}
+        @endforeach
+    @endif
 
     <script>
         $(document).ready(function() {

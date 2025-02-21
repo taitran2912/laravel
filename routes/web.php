@@ -17,7 +17,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 
 /* BACKEND ROUTE */
-Route::get('dashboard.index', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(AuthenticateMiddlewawre::class);
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(AuthenticateMiddlewawre::class);
 
 /* USER */
-Route::get('user/index', [UserController::class, 'index'])->name('user.index')->middleware(AuthenticateMiddlewawre::class);
+Route::get('user', [UserController::class, 'index'])->name('user.index')->middleware(AuthenticateMiddlewawre::class);
