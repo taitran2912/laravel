@@ -36,17 +36,54 @@
                 </div>
             </div>
             <div class="ibox-content">
+                <div class="filter">
+                    <div class="uk-flex uk-flex-middle uk-flex-space-between">
+                        <div class="perpage">
+                            <div class="uk-flex uk-flex-middle uk-flex-space-between">
+                                <select name="perpage" class="form-control input-sm perpage filter mr10" id="">
+                                    @for ($i = 20; $i<=200; $i+=20)
+                                        <option value="{{$i}}"> {{$i}} bản ghi</option>
+                                    @endfor
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <div class="action">
+                            <div class="uk-flex uk-flex-middle ">
+                                <select name="user_catalogue_id" class="form-control mr10" id="">
+                                    <option value="0" selected="selected"> Chọn Nhóm Thành Viên</option>
+                                    <option value="1">Quản trị viên</option>
+                                </select>
     
+                                <div class="uk-search uk-flex uk-flex-middle mr10">
+                                    <div class="input-group">
+                                        <input type="text" name="keyword" class="form-control" placeholder="Tìm kiếm...">
+                                        
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-primary mh0 btn-sm" name="search" value="search" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="" class=" btn btn-danger"><i class="fa fa-plus"></i> Thêm </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <table class="table table-striped table-bordered">
                     <thead>
                     <tr>
                         <th>
                             <input type="checkbox" name="" class="input-checkbox" id="checkAll">
                         </th>
-                        <th>Ảnh</th>
-                        <th>Thông tin thành viên</th>
-                        <th>Địa chỉ</th>
-                        <th>Tình trạng</th>
+                        <th style="width: 90px;">Ảnh</th>
+                        <th>Họ tên:</th>
+                        <th>Email:</th>
+                        <th>Số điện thoại:</th>
+                        <th>Địa chỉ:</th>
+                        <th class="text-center">Tình trạng</th>
+                        <th class="text-center">Thao tác: </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -55,22 +92,29 @@
                             <input type="checkbox" class="input-checkbox checkBoxItem">
                         </td>
                         <td>
-                            <span class="image"><img src="https://e7.pngegg.com/pngimages/491/506/png-clipart-h%C5%8Dtar%C5%8D-oreki-hyouka-eru-chitanda-satoshi-fukube-anime-hyouka-face-black-hair-thumbnail.png" alt=""></span>
+                            <span class="image img_cover"><img src="https://e7.pngegg.com/pngimages/491/506/png-clipart-h%C5%8Dtar%C5%8D-oreki-hyouka-eru-chitanda-satoshi-fukube-anime-hyouka-face-black-hair-thumbnail.png" alt="" ></span>
                         </td>
                         <td>
-                            <div class="user-item name">Họ tên: Trần Tấn Tài</div>
-                            <div class="user-item email">Email: trantantai@gmailcom</div>
-                            <div class="user-item phone">Phone: 01234567</div>
+                            <div class="user-item name">Trần Tấn Tài</div>
+                            
+                            
                         </td>
                         <td>
-                            <div class="user-item name">Địa chỉ: </div>
-                            <div class="user-item email">Phường:</div>
-                            <div class="user-item phone">Quận: </div>
-                            <div class="user-item phone">Thành phố: </div>
-
+                            <div class="user-item email">trantantai@gmailcom</div>
+                        </td>
+                        <td>
+                            <div class="user-item phone">01234567</div>
+                        </td>
+                        <td>
+                            ddafm sen
                         </td>
                         <td>
                             <input type="checkbox" class="js-switch" checked />
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-success"><i class="fa fa-edit"></i></a>
+                            <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+
                         </td>
                     </tr>
                     </tbody>

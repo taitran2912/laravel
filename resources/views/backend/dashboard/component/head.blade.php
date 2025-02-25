@@ -10,9 +10,10 @@
             {!! '<link href="'.$value.'" rel="stylesheet">'!!}
         @endforeach
     @endif
+    <link href="backend/css/customize.css" rel="stylesheet">
     <link href="backend/css/animate.css" rel="stylesheet">
     <link href="backend/css/style.css" rel="stylesheet">
-    <link href="backend/css/customize.css" rel="stylesheet">
+    
     <script src="backend/js/jquery-2.1.1.js"></script>
     
 
